@@ -1,18 +1,34 @@
 :root {
     --coloredText: darkblue;
+    --defaultMargin: 8px;
 }
 
 body {
     background-color: #33393f;
 }
 
-h1, h2 {
+h1 {
     color: var(--coloredText);
     text-align: center;
 }
 
+h2 {
+    border: solid whitesmoke 2px;
+    border-radius: 10px;
+    color: var(--coloredText);
+    font-size: 32px;
+    padding: 8px;
+    margin: var(--defaultMargin);
+}
+
+/* p {
+    color: lightgray;
+} */
 p, pre {
     color: lightgray;
+    font-size: 18px;
+    padding: 6px;
+    margin: var(--defaultMargin);
 }
 
 #pageHeader {
@@ -25,14 +41,23 @@ p, pre {
 
 #allSnippetsContainer {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
 }
 
 .snippetContainer {
-    border: solid black 1px;
-    padding: 10px;
+    border: dotted whitesmoke 2px;
+    margin: 4px;
+    padding: 0px;
+    flex-grow: 1;
+}
+
+.snippetContainer:hover {
+    opacity: .75;
 }
 
 .snippet {
-
+    background: linear-gradient(darkblue, blue);
+    user-select: all;
+    margin: var(--defaultMargin);
 }
